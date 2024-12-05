@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="pokeball.png" type="image/x-icon">
+    <title>Pokegram - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow-x: hidden; 
+        }
+
+        header {
+            background-color: #333; 
+            color: white;
+            display: flex;
+            opacity: 0.9;
+            justify-content: space-between; 
+            align-items: center; 
+            padding: 10px 20px; 
+            width: 100%;
+            height: 50px;
+            position: sticky;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        header img {
+            height: 35px; 
+            margin-right: 10px; 
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 26px;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 25px;
+            height: 20px;
+            cursor: pointer;
+            margin-right: 30px; 
+        }
+
+        .hamburger div {
+            height: 3px;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        .header-image {
+            width: 100%;
+            max-width: 1200px;
+            height: 300px;
+            background: url('homeheader.png') no-repeat center center;
+            background-size: cover;
+            margin: 30px auto; 
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row; 
+            justify-content: center; 
+            flex-wrap: wrap;
+            gap: 90px;
+            padding-top: 60px;
+            padding-bottom: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .wrapper {
+            text-align: center;
+            position: relative;
+            width: 300px; 
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: filter 0.3s ease;
+            filter: brightness(0.6); 
+        }
+
+        body.home .home img {
+            filter: brightness(1); 
+        }
+
+        body.home .about img, 
+        body.home .contact img {
+            filter: brightness(0.6); 
+        }
+
+        body.about .about img {
+            filter: brightness(1); 
+        }
+
+        body.about .home img, 
+        body.about .contact img {
+            filter: brightness(0.6); 
+        }
+
+        body.contact .contact img {
+            filter: brightness(1); 
+        }
+
+        body.contact .home img, 
+        body.contact .about img {
+            filter: brightness(0.6); 
+        }
+
+        .image-container:hover img {
+            filter: brightness(1) !important;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 5px;
+            width: 100%;
+            height: 40px;
+            position: sticky;
+            bottom: 0;
+            left: 0;
+            opacity: 0.9; 
+        }
+
+        .post {
+            background-color: white;
+            max-width: 800px;
+            margin: 30px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .post-header {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+            background-color: #f8f8f8;
+        }
+
+        .post-header h2 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .post-header p {
+            margin: 5px 0 0;
+            color: #777;
+            font-size: 14px;
+        }
+
+        .post-content {
+            padding: 20px;
+        }
+
+        .post-content p {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.6;
+            margin: 0 0 20px;
+        }
+    </style>
+</head>
+<body class="home"> 
+    <header>
+        <div style="display: flex; align-items: center;">
+            <img src="pokeball.png" alt="Pokeball Logo"> 
+            <h1>Pokegram</h1>
+        </div>
+
+
+        <a href="easteregg.html" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </a>
+    </header>
+
+
+    <div class="header-image"></div>
+
+    <div class="container">
+        <div class="wrapper home">
+            <div class="image-container">
+                <a href="home.html"><img src="home.png" alt="Home Image"></a>
+            </div>
+        </div>
+
+        <div class="wrapper about">
+            <div class="image-container">
+                <a href="about.html"><img src="about.png" alt="About Image"></a>
+            </div>
+        </div>
+
+        <div class="wrapper contact">
+            <div class="image-container">
+                <a href="contact.html"><img src="contacts.png" alt="Contacts Image"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="post">
+        <div class="post-header">
+            <h2>Introduction to Computing: Midterms Exam</h2>
+            <p>Posted on September 16, 2024</p>
+        </div>
+
+        <div class="post-content">
+            <p>
+                Hello! Welcome to Pokegram! I made this website for my midterms exam in my course Introduction to Computing!
+            </p>
+            <p>
+                I made this website's layout and features using HTML and CSS. Of course, with the help of my friends Youtube and Gepot! (ChatGPT po for debugging and fixing hehe)
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Cabatian</p>
+    </footer>
+</body>
+</html>
